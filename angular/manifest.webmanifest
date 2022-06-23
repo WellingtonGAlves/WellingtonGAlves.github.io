@@ -1,0 +1,59 @@
+{
+  "name": "Vitrine - Bolpar Distribuidora",
+  "short_name": "Vitrine B.",
+  "theme_color": "#167582",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://bolpar.com.br/assets/logo-vitrine.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

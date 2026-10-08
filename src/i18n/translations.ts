@@ -16,6 +16,13 @@ const sharedProjects = (lang: Language): ProjectItem[] => {
   if (lang === "en") {
     return [
       {
+        title: "AI Customer Service Analysis & Monitoring — Digisac",
+        description:
+          "Developed a full stack application integrated with Digisac to evaluate past customer service conversations and monitor ongoing tickets. Integrated the OpenAI API for conversation analysis, audio transcription and interpretation of images, videos and PDFs. Implemented agent guidance, follow-up scheduling, evidence-backed reports, versioned evaluation criteria and AI cost controls. Includes JSON file persistence, local cache, duplicate-action prevention, simulation mode and automated tests. (Sep–Oct/2026)",
+        technologies: ["Node.js 22+", "JavaScript", "ESM", "HTML", "CSS", "Digisac REST API", "OpenAI API", "GPT-4.1 mini", "GPT-4o mini Transcribe", "FFmpeg", "FFprobe", "PDF.js", "Canvas", "JSON", "Local Cache", "Git", "npm", "PM2", "Node.js Native Tests"],
+        type: "professional",
+      },
+      {
         title: "Vehicle Tracking System",
         description:
           "Built from scratch with a monitoring dashboard, GPS device integration and real-time notifications.",
@@ -101,6 +108,13 @@ const sharedProjects = (lang: Language): ProjectItem[] => {
     ];
   }
   return [
+    {
+      title: "Análise e Monitoramento de Atendimentos com IA — Digisac",
+      description:
+        "Desenvolvimento de aplicação full stack integrada à Digisac para avaliar atendimentos históricos e acompanhar chamados em andamento. Integração com a API da OpenAI para análise de conversas, transcrição de áudios e interpretação de imagens, vídeos e PDFs. Implementação de orientações aos atendentes, agendamento de retornos, relatórios com evidências, critérios de avaliação versionados e controle de custos de IA. Inclui persistência em arquivos JSON, cache local, prevenção de ações duplicadas, modo simulado e testes automatizados. (set–out/2026)",
+      technologies: ["Node.js 22+", "JavaScript", "ESM", "HTML", "CSS", "API REST Digisac", "API OpenAI", "GPT-4.1 mini", "GPT-4o mini Transcribe", "FFmpeg", "FFprobe", "PDF.js", "Canvas", "JSON", "Cache Local", "Git", "npm", "PM2", "Testes Nativos Node.js"],
+      type: "professional",
+    },
     {
       title: "Sistema de Rastreamento de Veículos",
       description:
@@ -202,7 +216,7 @@ export const translations = {
       paragraphs: [
         "Full Stack Developer with 8+ years of experience building robust web solutions — from vehicle tracking systems and e-commerce platforms to intelligent WhatsApp automations and AI-driven self-service bots.",
         "Comfortable across the entire stack: PHP/Laravel, Node.js, Java and TypeScript on the backend; Angular, Ionic and modern CSS on the frontend; PostgreSQL, MySQL and Redis on data; plus integrations via REST, Webhooks, WebSockets and queue systems like BullMQ.",
-        "Currently focused on smart automations, geocoding microservices and mobile experiences — always shipping solutions that drive real, measurable impact.",
+        "Currently developing an ERP and a new vehicle tracking platform integrated with it. Recent work also includes AI-powered customer service analysis and monitoring with Digisac and OpenAI, alongside smart automations and geocoding microservices.",
       ],
       highlights: [
         { label: "Years", value: "8+" },
@@ -305,6 +319,22 @@ export const translations = {
             "Deployed a local server for reverse geocoding with OpenStreetMap data, Docker Compose, Nginx and PostgreSQL/PostGIS on Ubuntu via WSL2 on Windows. Created PowerShell scripts for startup and network access configuration, plus Python monitoring of CPU, memory and disk to support infrastructure sizing.",
           icon: "work" as const,
         },
+        {
+          year: "Sep/2026 – Oct/2026",
+          title: "AI Customer Service Analysis & Monitoring",
+          subtitle: "Digisac + OpenAI — Full Stack",
+          description:
+            "Developed an application to evaluate past conversations and monitor ongoing tickets, with audio transcription, image, video and PDF interpretation, agent guidance and follow-up scheduling. Includes evidence-backed reports, versioned evaluation criteria, AI cost controls, cache, duplicate-action prevention, simulation mode and automated tests.",
+          icon: "work" as const,
+        },
+        {
+          year: "Present",
+          title: "ERP & New Tracking Platform",
+          subtitle: "In development",
+          description:
+            "Currently developing an ERP and a new vehicle tracking platform integrated with it.",
+          icon: "work" as const,
+        },
       ],
     },
     projects: {
@@ -325,11 +355,12 @@ export const translations = {
         { name: "Frontend", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "Ionic", "jQuery", "Bootstrap CSS", "Tailwind CSS"] },
         { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ", "Python"] },
         { name: "Database", skills: ["PostgreSQL", "PostGIS", "MySQL", "Redis", "Data Modeling", "SQL"] },
-        { name: "Integrations", skills: ["RESTful API", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
-        { name: "DevOps & Tools", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "SSL"] },
+        { name: "Integrations", skills: ["RESTful API", "Digisac API", "OpenAI API", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
+        { name: "DevOps & Tools", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "PM2", "Node.js Native Tests", "SSL"] },
         { name: "Digital Marketing", skills: ["Google Ads", "Facebook Ads", "Google Analytics", "Tag Manager", "SEO", "Pixel"] },
         { name: "Cloud & Infrastructure", skills: ["AWS (VPS)", "Google Cloud Run", "Google Cloud TTS", "Google Cloud (VPS)", "Hostinger (VPS)", "Google Sheets API", "AppScript"] },
         { name: "Geolocation", skills: ["Nominatim", "OpenStreetMap", "Reverse Geocoding"] },
+        { name: "AI & Media", skills: ["GPT-4.1 mini", "GPT-4o mini Transcribe", "FFmpeg", "FFprobe", "PDF.js", "Canvas"] },
       ],
     },
     contact: {
@@ -359,7 +390,7 @@ export const translations = {
       paragraphs: [
         "Desenvolvedor Full Stack com mais de 8 anos de experiência criando soluções web robustas — de sistemas de rastreamento de veículos e plataformas de e-commerce a automações inteligentes no WhatsApp e robôs de autoatendimento com IA.",
         "Confortável em toda a stack: PHP/Laravel, Node.js, Java e TypeScript no backend; Angular, Ionic e CSS moderno no frontend; PostgreSQL, MySQL e Redis em dados; além de integrações via REST, Webhooks, WebSockets e filas como BullMQ.",
-        "Atualmente focado em automações inteligentes, microsserviços de geocoding e experiências mobile — sempre entregando soluções com impacto real e mensurável.",
+        "Atualmente desenvolvendo um ERP e uma nova plataforma de rastreamento de veículos integrada a ele. Entre os projetos recentes estão a análise e o monitoramento de atendimentos com IA usando Digisac e OpenAI, além de automações inteligentes e microsserviços de geocoding.",
       ],
       highlights: [
         { label: "Anos", value: "8+" },
@@ -462,6 +493,22 @@ export const translations = {
             "Implantação de servidor local para geocodificação reversa com dados do OpenStreetMap, Docker Compose, Nginx e PostgreSQL/PostGIS em Ubuntu via WSL2 no Windows. Criação de scripts PowerShell para inicialização e configuração de acesso pela rede, além de monitoramento em Python de CPU, memória e disco para apoiar o dimensionamento da infraestrutura.",
           icon: "work" as const,
         },
+        {
+          year: "set/2026 – out/2026",
+          title: "Análise e Monitoramento de Atendimentos com IA",
+          subtitle: "Digisac + OpenAI — Full Stack",
+          description:
+            "Desenvolvimento de aplicação para avaliar atendimentos históricos e acompanhar chamados em andamento, com transcrição de áudios, interpretação de imagens, vídeos e PDFs, orientações aos atendentes e agendamento de retornos. Inclui relatórios com evidências, critérios de avaliação versionados, controle de custos de IA, cache, prevenção de ações duplicadas, modo simulado e testes automatizados.",
+          icon: "work" as const,
+        },
+        {
+          year: "Atual",
+          title: "ERP e Nova Plataforma de Rastreamento",
+          subtitle: "Em desenvolvimento",
+          description:
+            "Desenvolvimento em andamento de um ERP e de uma nova plataforma de rastreamento de veículos integrada a ele.",
+          icon: "work" as const,
+        },
       ],
     },
     projects: {
@@ -482,11 +529,12 @@ export const translations = {
         { name: "Frontend", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "Ionic", "jQuery", "Bootstrap CSS", "Tailwind CSS"] },
         { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ", "Python"] },
         { name: "Banco de Dados", skills: ["PostgreSQL", "PostGIS", "MySQL", "Redis", "Modelagem de Dados", "SQL"] },
-        { name: "Integrações", skills: ["API RESTful", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
-        { name: "DevOps & Ferramentas", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "SSL"] },
+        { name: "Integrações", skills: ["API RESTful", "API Digisac", "API OpenAI", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
+        { name: "DevOps & Ferramentas", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "PM2", "Testes Nativos Node.js", "SSL"] },
         { name: "Marketing Digital", skills: ["Google Ads", "Facebook Ads", "Google Analytics", "Tag Manager", "SEO", "Pixel"] },
         { name: "Cloud & Infraestrutura", skills: ["AWS (VPS)", "Google Cloud Run", "Google Cloud TTS", "Google Cloud (VPS)", "Hostinger (VPS)", "Google Sheets API", "AppScript"] },
         { name: "Geolocalização", skills: ["Nominatim", "OpenStreetMap", "Geocodificação Reversa"] },
+        { name: "IA & Mídia", skills: ["GPT-4.1 mini", "GPT-4o mini Transcribe", "FFmpeg", "FFprobe", "PDF.js", "Canvas"] },
       ],
     },
     contact: {

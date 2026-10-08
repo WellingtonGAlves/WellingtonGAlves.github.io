@@ -92,10 +92,10 @@ const sharedProjects = (lang: Language): ProjectItem[] => {
         type: "automation",
       },
       {
-        title: "Geocoding Microservice (GPS → Address)",
+        title: "Geocoding Microservice & Local Nominatim Server",
         description:
-          "Node.js microservice that converts GPS coordinates into addresses using Google Geocoding API, Photon and Nominatim as free fallbacks. Built-in cache to avoid repeated lookups and BullMQ queue support for high-volume processing. Integrated with the vehicle tracking system. (April/2026)",
-        technologies: ["Node.js", "BullMQ", "Redis", "Google Geocoding API", "Photon", "Nominatim", "Cache"],
+          "Developed a Node.js microservice integrated with the vehicle tracking system to convert GPS coordinates into addresses using Google Geocoding API, with Photon and Nominatim as free fallbacks, Redis cache and BullMQ queues for high-volume processing. Deployed and configured a local Nominatim server with OpenStreetMap data, Docker Compose, Nginx as a reverse proxy and PostgreSQL/PostGIS on Ubuntu via WSL2 on Windows. Created PowerShell scripts for startup and network access configuration, plus Python monitoring of CPU, memory and disk to support infrastructure sizing. (April–May/2026)",
+        technologies: ["Node.js", "BullMQ", "Redis", "Google Geocoding API", "Photon", "Nominatim", "OpenStreetMap", "Docker Compose", "Nginx", "PostgreSQL/PostGIS", "Ubuntu/WSL2", "PowerShell", "Python"],
         type: "automation",
       },
     ];
@@ -178,10 +178,10 @@ const sharedProjects = (lang: Language): ProjectItem[] => {
       type: "automation",
     },
     {
-      title: "Microsserviço de Geocoding (GPS → Endereço)",
+      title: "Microsserviço de Geocoding e Servidor Local Nominatim",
       description:
-        "Microsserviço em Node.js que converte coordenadas GPS em endereços usando Google Geocoding API, Photon e Nominatim como fallbacks gratuitos. Cache integrado para evitar consultas repetidas e suporte a fila BullMQ para alto volume. Integrado ao sistema de rastreamento de veículos. (abril/2026)",
-      technologies: ["Node.js", "BullMQ", "Redis", "Google Geocoding API", "Photon", "Nominatim", "Cache"],
+        "Desenvolvimento de microsserviço em Node.js integrado ao sistema de rastreamento de veículos para converter coordenadas GPS em endereços, utilizando Google Geocoding API, com Photon e Nominatim como fallbacks gratuitos, cache Redis e filas BullMQ para alto volume. Implantação e configuração de servidor local Nominatim com dados do OpenStreetMap, Docker Compose, Nginx como proxy reverso e PostgreSQL/PostGIS, em Ubuntu via WSL2 no Windows. Criação de scripts PowerShell para inicialização e configuração de acesso pela rede, além de monitoramento em Python de CPU, memória e disco para apoiar o dimensionamento da infraestrutura. (abril–maio/2026)",
+      technologies: ["Node.js", "BullMQ", "Redis", "Google Geocoding API", "Photon", "Nominatim", "OpenStreetMap", "Docker Compose", "Nginx", "PostgreSQL/PostGIS", "Ubuntu/WSL2", "PowerShell", "Python"],
       type: "automation",
     },
   ];
@@ -297,6 +297,14 @@ export const translations = {
             "Built a microservice to convert GPS coordinates into addresses with Google Geocoding, Photon and Nominatim, integrated cache and queue support — plugged into the vehicle tracking system.",
           icon: "work" as const,
         },
+        {
+          year: "May/2026",
+          title: "Local Geocoding Server",
+          subtitle: "Nominatim — OpenStreetMap",
+          description:
+            "Deployed a local server for reverse geocoding with OpenStreetMap data, Docker Compose, Nginx and PostgreSQL/PostGIS on Ubuntu via WSL2 on Windows. Created PowerShell scripts for startup and network access configuration, plus Python monitoring of CPU, memory and disk to support infrastructure sizing.",
+          icon: "work" as const,
+        },
       ],
     },
     projects: {
@@ -315,12 +323,13 @@ export const translations = {
       subtitle: "> Full stack to deliver end to end",
       categories: [
         { name: "Frontend", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "Ionic", "jQuery", "Bootstrap CSS", "Tailwind CSS"] },
-        { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ"] },
-        { name: "Database", skills: ["PostgreSQL", "MySQL", "Redis", "Data Modeling", "SQL"] },
+        { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ", "Python"] },
+        { name: "Database", skills: ["PostgreSQL", "PostGIS", "MySQL", "Redis", "Data Modeling", "SQL"] },
         { name: "Integrations", skills: ["RESTful API", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
-        { name: "DevOps & Tools", skills: ["Git", "Linux", "Docker", "Composer", "NPM", "SSL"] },
+        { name: "DevOps & Tools", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "SSL"] },
         { name: "Digital Marketing", skills: ["Google Ads", "Facebook Ads", "Google Analytics", "Tag Manager", "SEO", "Pixel"] },
         { name: "Cloud & Infrastructure", skills: ["AWS (VPS)", "Google Cloud Run", "Google Cloud TTS", "Google Cloud (VPS)", "Hostinger (VPS)", "Google Sheets API", "AppScript"] },
+        { name: "Geolocation", skills: ["Nominatim", "OpenStreetMap", "Reverse Geocoding"] },
       ],
     },
     contact: {
@@ -445,6 +454,14 @@ export const translations = {
             "Criação de microsserviço para converter coordenadas GPS em endereços usando Google Geocoding, Photon e Nominatim, com cache integrado e suporte a fila — acoplado ao sistema de rastreamento de veículos.",
           icon: "work" as const,
         },
+        {
+          year: "maio/2026",
+          title: "Servidor Local de Geocodificação",
+          subtitle: "Nominatim — OpenStreetMap",
+          description:
+            "Implantação de servidor local para geocodificação reversa com dados do OpenStreetMap, Docker Compose, Nginx e PostgreSQL/PostGIS em Ubuntu via WSL2 no Windows. Criação de scripts PowerShell para inicialização e configuração de acesso pela rede, além de monitoramento em Python de CPU, memória e disco para apoiar o dimensionamento da infraestrutura.",
+          icon: "work" as const,
+        },
       ],
     },
     projects: {
@@ -463,12 +480,13 @@ export const translations = {
       subtitle: "> Stack completa para entregar do início ao fim",
       categories: [
         { name: "Frontend", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "Ionic", "jQuery", "Bootstrap CSS", "Tailwind CSS"] },
-        { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ"] },
-        { name: "Banco de Dados", skills: ["PostgreSQL", "MySQL", "Redis", "Modelagem de Dados", "SQL"] },
+        { name: "Backend", skills: ["PHP", "Laravel", "Java", "Node.js", "BullMQ", "Python"] },
+        { name: "Banco de Dados", skills: ["PostgreSQL", "PostGIS", "MySQL", "Redis", "Modelagem de Dados", "SQL"] },
         { name: "Integrações", skills: ["API RESTful", "JSON", "XML", "NuSOAP", "Webhook", "WebSocket"] },
-        { name: "DevOps & Ferramentas", skills: ["Git", "Linux", "Docker", "Composer", "NPM", "SSL"] },
+        { name: "DevOps & Ferramentas", skills: ["Git", "Linux", "Ubuntu/WSL2", "Docker", "Docker Compose", "Nginx", "PowerShell", "Composer", "NPM", "SSL"] },
         { name: "Marketing Digital", skills: ["Google Ads", "Facebook Ads", "Google Analytics", "Tag Manager", "SEO", "Pixel"] },
         { name: "Cloud & Infraestrutura", skills: ["AWS (VPS)", "Google Cloud Run", "Google Cloud TTS", "Google Cloud (VPS)", "Hostinger (VPS)", "Google Sheets API", "AppScript"] },
+        { name: "Geolocalização", skills: ["Nominatim", "OpenStreetMap", "Geocodificação Reversa"] },
       ],
     },
     contact: {

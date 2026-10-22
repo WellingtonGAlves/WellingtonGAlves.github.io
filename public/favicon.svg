@@ -1,23 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">WGA monogram</title>
-  <desc id="desc">Wellington G. Alves initials WGA on a dark rounded square.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e293b" />
-    </linearGradient>
-    <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22d3ee" />
-      <stop offset="100%" stop-color="#a78bfa" />
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)" />
-  <text x="50%" y="52%"
-        text-anchor="middle"
-        dominant-baseline="central"
-        font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
-        font-weight="800"
-        font-size="22"
-        fill="url(#txt)"
-        letter-spacing="-1">WGA</text>
+  <title id="title">WGA</title>
+  <desc id="desc">Monograma WGA de Wellington G. Alves.</desc>
+  <rect width="64" height="64" rx="14" fill="#0e1216"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="13" fill="none" stroke="#2ed69a" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="32" y="34" text-anchor="middle" dominant-baseline="central"
+        font-family="ui-monospace, 'JetBrains Mono', monospace"
+        font-weight="700" font-size="18" fill="#2ed69a" letter-spacing="-0.5">WGA</text>
 </svg>

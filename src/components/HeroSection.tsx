@@ -25,8 +25,11 @@ const HeroSection = () => {
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-4">
             {t.hero.role}
           </p>
-          <h1 className="text-5xl md:text-7xl font-mono font-bold mb-6 text-gradient glow-text">
-            Wellington G. Alves
+          <h1 className="text-5xl md:text-7xl font-mono font-bold mb-6 text-gradient glow-text leading-[1.05]">
+            Wellington{" "}
+            <span className="whitespace-nowrap">
+              G.<span className="-ml-[0.38em]">&nbsp;</span>Alves
+            </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
             {t.hero.tagline}

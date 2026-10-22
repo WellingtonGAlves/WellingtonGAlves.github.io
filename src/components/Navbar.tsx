@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import LanguageToggle from "./LanguageToggle";
 
@@ -32,6 +32,14 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href={t.nav.resumeHref}
+            download={t.nav.resumeFile}
+            className="font-mono text-xs text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1.5"
+          >
+            <Download className="w-3.5 h-3.5" />
+            {t.nav.resume}
+          </a>
           <LanguageToggle />
         </div>
 
@@ -61,6 +69,15 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href={t.nav.resumeHref}
+            download={t.nav.resumeFile}
+            onClick={() => setOpen(false)}
+            className="font-mono text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1.5"
+          >
+            <Download className="w-4 h-4" />
+            {t.nav.resume}
+          </a>
         </div>
       )}
     </nav>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Link, Code, MessageCircle } from "lucide-react";
+import { Mail, Link, Code, MessageCircle, Download } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
 const HeroSection = () => {
@@ -59,6 +59,10 @@ const HeroSection = () => {
           <a href="https://github.com/WellingtonGAlves" target="_blank" rel="noopener noreferrer" className="glass rounded-lg px-5 py-3 flex items-center gap-2 hover:border-primary/50 transition-colors group">
             <Code className="w-4 h-4 text-primary" />
             <span className="text-sm text-secondary-foreground group-hover:text-foreground transition-colors">GitHub</span>
+          </a>
+          <a href={t.nav.resumeHref} download={t.nav.resumeFile} className="glass rounded-lg px-5 py-3 flex items-center gap-2 hover:border-primary/50 transition-colors group">
+            <Download className="w-4 h-4 text-primary" />
+            <span className="text-sm text-secondary-foreground group-hover:text-foreground transition-colors">{t.nav.resume}</span>
           </a>
         </motion.div>
 

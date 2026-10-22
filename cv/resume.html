@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <title>Résumé — Wellington G. Alves</title>
   <style>
-    @page { size: A4; margin: 11mm 13mm 13mm 13mm; }
+    @page { size: A4; margin: 10mm 13mm 10mm 13mm; }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     body {
       font-family: Inter, "Noto Sans", sans-serif;
       color: #1c2430;
-      font-size: 10.15pt;
-      line-height: 1.38;
+      font-size: 9.45pt;
+      line-height: 1.28;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
     header {
       border-bottom: 2.5px solid #0f766e;
-      padding-bottom: 8px;
+      padding-bottom: 7px;
       margin-bottom: 2px;
     }
     h1 {
-      font-size: 20.5pt;
+      font-size: 20pt;
       line-height: 1.05;
       letter-spacing: -0.02em;
       margin: 0;
@@ -31,28 +31,28 @@
       color: #0f766e;
       font-weight: 600;
       font-size: 11pt;
-      margin-top: 3px;
+      margin-top: 2px;
     }
     .contact {
       color: #3d4a5c;
-      font-size: 8.6pt;
+      font-size: 8.5pt;
       line-height: 1.45;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     .contact a { color: inherit; text-decoration: none; }
     h2 {
-      font-size: 8.6pt;
+      font-size: 8.4pt;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #0f766e;
       border-bottom: 1px solid #c5ddd6;
       padding-bottom: 2px;
-      margin: 12px 0 6px;
+      margin: 8px 0 4px;
       font-weight: 700;
     }
-    p { margin: 0 0 6px; }
-    ul { margin: 2px 0 0; padding-left: 1.15em; }
-    li { margin: 0 0 2.5px; }
+    p { margin: 0; }
+    ul { margin: 3px 0 0; padding-left: 1.1em; }
+    li { margin: 0 0 1.5px; }
     .job-top {
       display: flex;
       justify-content: space-between;
@@ -66,38 +66,26 @@
       white-space: nowrap;
       font-size: 9pt;
     }
-    .where { color: #3d4a5c; font-size: 9.3pt; margin: 1px 0 4px; }
-    .row {
-      display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 2px 10px;
-      margin: 0 0 3px;
-      font-size: 9.5pt;
-    }
-    .row .when { font-size: 8.7pt; padding-top: 1px; }
-    .proj { margin: 0 0 5px; break-inside: avoid; }
-    .proj strong { font-weight: 700; }
-    .tags {
-      display: block;
-      color: #0f766e;
-      font-size: 8.15pt;
-      line-height: 1.35;
-      margin-top: 1px;
-    }
+    .where { color: #3d4a5c; font-size: 9.2pt; margin: 1px 0 2px; }
+    .edu { margin: 0 0 2px; }
     .skills {
       display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 3px 10px;
-      font-size: 8.9pt;
-      line-height: 1.32;
-      break-inside: avoid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 18px;
+      font-size: 8.5pt;
+      line-height: 1.3;
     }
-    .skills dt { font-weight: 700; color: #0f766e; }
-    .skills dd { margin: 0; }
-    .note { color: #3d4a5c; font-size: 9.2pt; margin-top: 8px; }
+    .skills div { break-inside: avoid; }
+    .skills strong {
+      display: block;
+      color: #0f766e;
+      font-size: 8.2pt;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
     .nowrap { white-space: nowrap; }
     h2, .job-top { break-after: avoid; }
-    .row { break-inside: avoid; }
+    li { break-inside: avoid; }
   </style>
 </head>
 <body>
@@ -114,77 +102,42 @@
     </div>
   </header>
 
-  <h2>Summary</h2>
-  <p>Full Stack Developer with 8+ years of experience building robust web solutions — from vehicle tracking systems and e-commerce platforms to intelligent WhatsApp automations and AI-driven self-service bots.</p>
-  <p>I currently build a complete vehicle-tracking ecosystem: a multi-company ERP in Laravel 11/PHP 8.3 with finance and support modules, a new tracking platform in Java 25 + Spring Boot 4 integrated with the ERP and the legacy platform, and my own AI agent harness (Arvyn). Day to day I use Cursor and Claude Code with Claude Opus 5.5, Claude Fable and Grok. I also look after the server, backup routines, and making sure new improvements do not take the production app down.</p>
+  <h2>Profile</h2>
+  <p>Full stack developer for 8+ years, based in Curitiba. At BolTech Trackers and Bolpar since 2018: vehicle tracking, ERP, finance, e-commerce and WhatsApp. I write the code, wire the integrations and keep the production server up.</p>
 
-  <h2>Current role</h2>
+  <h2>Experience</h2>
   <div class="job-top">
-    <div class="job-title">ERP, new tracking platform and AI harness</div>
-    <div class="when">Jun/2026 – present</div>
+    <div class="job-title">Full stack developer</div>
+    <div class="when">2018 – present</div>
   </div>
-  <div class="where">BolTech Trackers — Full Stack / Backend</div>
+  <div class="where">BolTech Trackers and Bolpar Distributor — Curitiba</div>
   <ul>
-    <li>Multi-tenant ERP on Laravel 11, PostgreSQL, Redis, RabbitMQ, WebSockets with Reverb and REST with Swagger.</li>
-    <li>Finance module with its own database: Itaú bolecode billing microservice (boletos and PIX), credit and debit cards via e.Rede, cash drawers and collection rules.</li>
-    <li>Support module with tickets, pending items, checklists and a knowledge base. <span class="nowrap">NF-e/NFS-e</span> invoices via Focus NFe.</li>
-    <li>New tracking platform in Java 25 + Spring Boot 4 (Spring Security/JWT, JPA, Flyway, Redis, OpenAPI and CI with GitHub Actions).</li>
-    <li>Integration between the legacy platform and the new one, with both running together in production.</li>
-    <li>Debian/Apache server, Supervisor workers and automatic database and storage backups. Production protected with environment keys, automated tests and review before every merge.</li>
-    <li>Development with Cursor and Claude Code (Claude Opus 5.5, Claude Fable and Grok) and with Arvyn, a TypeScript/Node 22 harness that orchestrates agents as Planner → Coder → checks → QA → Reviewer, in parallel, with worktrees and isolated databases.</li>
+    <li>Vehicle tracking built from scratch and still in production. Ionic and Angular app (Google Play and the App Store) and the BolTech website.</li>
+    <li>Multi-company ERP on Laravel 11 and PHP 8.3: staged sales, credit, billing, inventory, SIM cards, service orders, commissions and <span class="nowrap">NF-e/NFS-e</span> through Focus NFe. API with Swagger, Redis and RabbitMQ queues, WebSocket with Reverb, Sanctum, an audit trail, PHPUnit and Pint.</li>
+    <li>Finance on its own database: receivables and payables, duplicatas, boletos and PIX via Itaú bolecode, cards on e.Rede (3DS, token, recurrence and refunds), cash drawers, withdrawals, write-offs and reports.</li>
+    <li>Support: tickets, sub-tickets, pending items, types, channels, checklists, a knowledge base and attachments. Login stays on the ERP.</li>
+    <li>New platform in Java 25 and Spring Boot 4, live next to the old one and tied to the ERP. JWT on the app, an API token for the ERP, roles and permissions, audit, alarms, notices, geofences, push, position history with addresses and export, Flyway. PostgreSQL tests on GitHub Actions, OpenAPI and a Postman collection.</li>
+    <li>Debian server with Apache, development and production on the same VPS, Supervisor queues, daily backups (pg_dump and files), Nginx and SSL. I ship with tests and a review, without taking the app down.</li>
+    <li>WhatsApp: bulk messaging, a bot that looks up products on the Bolpar site, Bling orders (Cloud Run) and audio campaigns with Google TTS. Also a finance tracker and sales-participation credits from Bling.</li>
+    <li>Bolpar e-commerce: catalog, quote cart and an ERP link over WebService (NuSOAP).</li>
+    <li>Geocoding (Apr–May/2026): Node.js, BullMQ, Redis, Google, Photon and Nominatim. A local Nominatim server with OpenStreetMap, Docker, Nginx and PostGIS on WSL2, a PowerShell startup script and Python monitoring.</li>
+    <li>Digisac customer service (Sep–Oct/2026): text, audio, images, video and PDFs with OpenAI (GPT-4.1 mini and transcription), agent guidance, follow-ups, reports with the evidence, API cost tracking, JSON, cache, a duplicate-action lock, simulation mode and tests. PM2 and FFmpeg.</li>
+    <li>Arvyn, a program I wrote in TypeScript and Node 22 on the Claude Agent SDK. It plans, codes, tests (PHPUnit, Pint, Gradle), runs QA and review in worktrees with an isolated database. It queues work, pauses when I need to decide, pings Discord and delivers by branch. Day to day I use Cursor and Claude Code (Claude Opus 5.5, Claude Fable and Grok) and MCP.</li>
   </ul>
 
-  <h2>Journey</h2>
-  <div class="row"><div class="when">Sep–Oct/2026</div><div>AI customer-service analysis and monitoring with Digisac and OpenAI. Audio transcription, image, video and PDF reading, evidence-backed reports and automated tests.</div></div>
-  <div class="row"><div class="when">Apr–May/2026</div><div>Geocoding microservice (Node.js, BullMQ, Redis, Google, Photon and Nominatim) and a local Nominatim server with OpenStreetMap, Docker, Nginx and PostGIS.</div></div>
-  <div class="row"><div class="when">2026</div><div>BolTech vehicle-tracking mobile app — Ionic and Angular. Layout, bug fixes and new features.</div></div>
-  <div class="row"><div class="when">2025</div><div>WhatsApp self-service bot integrated with the Bolpar website, searching products around the clock.</div></div>
-  <div class="row"><div class="when">2022–2024</div><div>Financial systems, Bling order automation, TTS audio campaigns and processing scripts.</div></div>
-  <div class="row"><div class="when">2019–2020</div><div>Bolpar e-commerce, WhatsApp bulk messaging and integrations via API, webhook and WebSocket.</div></div>
-  <div class="row"><div class="when">2018</div><div>Started as a full stack developer at BolTech Trackers and Bolpar. Built the vehicle tracking system from scratch.</div></div>
-  <div class="row"><div class="when">2015–2021</div><div>Systems Analysis and Development (Uni/Opet). Bootstrap and JavaScript certificates (DevMedia) and an Angular specialization (desenvolvedor.io).</div></div>
+  <h2>Education</h2>
+  <p class="edu">Systems Analysis and Development — Uni/Opet, since 2015.</p>
+  <p class="edu">Bootstrap and JavaScript — DevMedia, 2017. Angular (SPA and advanced) — desenvolvedor.io, 2021.</p>
 
-  <h2>Selected projects</h2>
-  <div class="proj">
-    <strong>BolTech ERP — multi-company.</strong> Staged sales, credit analysis, billing, inventory, SIM cards, service orders, commissions and <span class="nowrap">NF-e/NFS-e</span>. REST API with Swagger, Reverb, queues, auditing, a scheduler and backups.
-    <span class="tags">PHP 8.3 · Laravel 11 · PostgreSQL · Redis · RabbitMQ · Reverb · Swagger/OpenAPI · Sanctum · Focus NFe · PHPUnit · Pint</span>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><strong>Backend</strong>PHP 8.3, Laravel 11, Java 25, Spring Boot 4, Spring Security, JPA/Hibernate, Flyway, Gradle, Node.js, BullMQ, RabbitMQ, Reverb, Sanctum, Python</div>
+    <div><strong>Data</strong>PostgreSQL, PostGIS, MySQL, Redis, data modeling and SQL</div>
+    <div><strong>Integrations</strong>Itaú bolecode (boletos and PIX), e.Rede (cards), Focus NFe, Digisac, OpenAI, Swagger/OpenAPI, Postman, REST, NuSOAP, webhooks, WebSocket, JSON, XML</div>
+    <div><strong>DevOps</strong>Git, Debian, Ubuntu/WSL2, Apache, Supervisor, Docker, Nginx, GitHub Actions, PHPUnit, Laravel Pint, pg_dump, PM2, SSL, PowerShell</div>
+    <div><strong>AI in code</strong>Claude Code, Cursor, Claude Agent SDK, MCP, Claude Opus 5.5, Claude Fable, Grok, Arvyn</div>
+    <div><strong>Frontend</strong>HTML, CSS, JavaScript, TypeScript, Angular, Ionic, jQuery, Bootstrap, Tailwind CSS</div>
+    <div><strong>Cloud and other</strong>Google Cloud Run, Google TTS, AWS, Hostinger, Google Ads, Analytics, Tag Manager, SEO, Nominatim, OpenStreetMap, FFmpeg</div>
   </div>
-  <div class="proj">
-    <strong>Finance module — Itaú bolecode and e.Rede cards.</strong> Accounts receivable and payable, duplicatas, boletos and PIX, cards with 3DS, tokenization, recurrence and refunds, cash drawers, withdrawals, write-off approvals and reports.
-    <span class="tags">Laravel 11 · PostgreSQL · Itaú bolecode microservice · e.Rede · PIX · Boletos · REST</span>
-  </div>
-  <div class="proj">
-    <strong>Support module.</strong> Tickets with sub-tickets, pending items, types and channels, checklists, a knowledge base and attachments. Authentication delegated to the ERP.
-    <span class="tags">Laravel 11 · PostgreSQL · REST · Sanctum</span>
-  </div>
-  <div class="proj">
-    <strong>New tracking platform (Boltech Platform).</strong> Separate channels for the app (JWT) and the ERP (API token), roles and permissions, auditing, alarms, geofences, push, position history with reverse geocoding and Flyway. Integrated with the ERP and the legacy platform, with PostgreSQL tests in CI and script-generated Postman collections.
-    <span class="tags">Java 25 · Spring Boot 4 · Spring Security · OAuth2/JWT · JPA · Flyway · Redis · PostgreSQL 16 · OpenAPI · Gradle · GitHub Actions</span>
-  </div>
-  <div class="proj">
-    <strong>Arvyn — AI agent harness.</strong> Planner → Coder → checks (PHPUnit, Pint, Gradle test) → QA → Reviewer, with parallel tasks, worktrees, databases cloned per slot, a request queue, pauses for human decisions, Discord notices and delivery by branch.
-    <span class="tags">TypeScript · Node.js 22 · Claude Agent SDK · Claude Code · Cursor · Claude Opus 5.5 · Claude Fable · Grok · MCP</span>
-  </div>
-  <div class="proj">
-    <strong>Server infrastructure.</strong> Debian/Apache VPS with development and production side by side, Supervisor per queue and per environment, automatic database and storage backups, and version switches that keep the app up.
-    <span class="tags">Debian · Apache · Supervisor · PostgreSQL · pg_dump · Redis · Nginx · SSL</span>
-  </div>
-  <p class="note">Also in the portfolio: the original tracking system, the mobile app on Google Play and the App Store, the BolTech website, Bolpar e-commerce, WhatsApp messaging and the self-service bot, AI customer-service analysis and the geocoding microservice. Full version at wellingtongalves.github.io.</p>
-
-  <h2>Technologies</h2>
-  <dl class="skills">
-    <dt>Backend</dt>
-    <dd>Laravel 11, PHP 8.3, Java 25, Spring Boot 4, Spring Security, JPA/Hibernate, Flyway, Gradle, Node.js, RabbitMQ, Reverb, Sanctum</dd>
-    <dt>Data</dt>
-    <dd>PostgreSQL, PostGIS, MySQL, Redis, data modeling and SQL</dd>
-    <dt>Integrations</dt>
-    <dd>Itaú bolecode (boletos/PIX), e.Rede (cards), Focus NFe (NF-e/NFS-e), Swagger/OpenAPI, Postman, REST, webhooks, WebSocket</dd>
-    <dt>DevOps</dt>
-    <dd>Debian, Apache, Supervisor, GitHub Actions, PHPUnit, Laravel Pint, Gradle test, Git worktrees, pg_dump, Docker, Nginx, SSL</dd>
-    <dt>AI in dev</dt>
-    <dd>Claude Code, Cursor, Claude Agent SDK, MCP, Claude Opus 5.5, Claude Fable, Grok, Arvyn</dd>
-    <dt>Frontend</dt>
-    <dd>TypeScript, Angular, Ionic, HTML, CSS, Tailwind CSS</dd>
-  </dl>
 </body>
 </html>

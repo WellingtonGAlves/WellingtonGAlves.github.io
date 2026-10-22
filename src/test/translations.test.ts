@@ -2,24 +2,27 @@ import { describe, expect, it } from "vitest";
 import { translations } from "@/i18n/translations";
 
 describe("currículo atual", () => {
-  it("substitui o terceiro parágrafo do resumo em português", () => {
+  it("resume o terceiro parágrafo sem repetir o ecossistema inteiro", () => {
     const paragraph = translations.pt.summary.paragraphs[2];
-    expect(paragraph).toContain("ERP multi-empresa em Laravel 11/PHP 8.3");
-    expect(paragraph).toContain("Java 25 + Spring Boot 4");
+    expect(paragraph).toContain("Laravel 11");
+    expect(paragraph).toContain("Java 25 e Spring Boot 4");
     expect(paragraph).toContain("Arvyn");
-    expect(paragraph).toContain("Claude Opus 5.5, Claude Fable e Grok");
+    expect(paragraph).not.toContain("bolecode");
+    expect(paragraph.length).toBeLessThan(280);
   });
 
-  it("atualiza a entrada atual da trajetória", () => {
+  it("deixa a entrada atual da trajetória curta", () => {
     const current = translations.pt.timeline.items.at(-1);
     expect(current?.year).toBe("jun/2026 – Atual");
     expect(current?.title).toBe("ERP, Nova Plataforma de Rastreamento e Harness de IA");
     expect(current?.subtitle).toBe("BolTech Rastreadores — Full Stack / Backend");
-    expect(current?.description).toContain("bolecode Itaú");
-    expect(current?.description).toContain("Planner → Coder → checks → QA → Reviewer");
+    expect(current?.description).toContain("ERP");
+    expect(current?.description).not.toContain("bolecode");
+    expect(current?.description).not.toContain("Planner");
+    expect(current?.description.length).toBeLessThan(220);
   });
 
-  it("inclui os projetos profissionais novos no início", () => {
+  it("guarda o detalhe nos projetos, sem repetir no resumo", () => {
     const titles = translations.pt.projects.items.filter((item) => item.type === "professional").map((item) => item.title);
     expect(titles.slice(0, 6)).toEqual([
       "ERP BolTech — multi-empresa",
@@ -29,9 +32,15 @@ describe("currículo atual", () => {
       "Arvyn — Harness de agentes de IA para desenvolvimento",
       "Infraestrutura e operação do servidor",
     ]);
+    const finance = translations.pt.projects.items.find((item) => item.title.startsWith("Módulo Financeiro"));
+    expect(finance?.description).toContain("bolecode Itaú");
+    expect(finance?.description).toContain("e.Rede");
+    const arvyn = translations.pt.projects.items.find((item) => item.title.startsWith("Arvyn"));
+    expect(arvyn?.description).toContain("worktree");
+    expect(arvyn?.description).toContain("PHPUnit");
   });
 
-  it("acrescenta a categoria de desenvolvimento assistido por IA", () => {
+  it("acrescenta a categoria de desenvolvimento assistido por IA sem chip duplicado", () => {
     const names = translations.pt.skills.categories.map((category) => category.name);
     expect(names).toContain("Desenvolvimento assistido por IA");
     const ai = translations.pt.skills.categories.find((category) => category.name === "Desenvolvimento assistido por IA");
@@ -47,11 +56,15 @@ describe("currículo atual", () => {
     ]);
     const backend = translations.pt.skills.categories.find((category) => category.name === "Backend");
     expect(backend?.skills).toEqual(expect.arrayContaining(["Laravel 11", "PHP 8.3", "Java 25", "Spring Boot 4", "Sanctum"]));
+    expect(backend?.skills).not.toContain("PHP");
+    expect(backend?.skills).not.toContain("Laravel");
+    expect(backend?.skills).not.toContain("Java");
   });
 
   it("aponta o download do PDF conforme o idioma", () => {
     expect(translations.pt.nav.resumeHref).toBe("/curriculo-wellington-alves.pdf");
     expect(translations.en.nav.resumeHref).toBe("/resume-wellington-alves.pdf");
     expect(translations.en.timeline.items.at(-1)?.year).toBe("Jun/2026 – Present");
+    expect(translations.en.summary.paragraphs[2]).toContain("Arvyn");
   });
 });

@@ -41,7 +41,7 @@ const ContactSection = () => {
           className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto"
         >
           <a
-            href="https://wa.me/5541995829776"
+            href="https://wa.me/5541996374950"
             target="_blank"
             rel="noopener noreferrer"
             className="glass rounded-xl p-5 hover:border-primary/50 transition-all group flex items-center gap-3"

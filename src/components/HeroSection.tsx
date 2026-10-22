@@ -51,7 +51,7 @@ const HeroSection = () => {
             <Mail className="w-4 h-4 text-primary" />
             <span className="text-sm text-secondary-foreground group-hover:text-foreground transition-colors">wellington_999@live.com</span>
           </a>
-          <a href="https://wa.me/5541995829776" target="_blank" rel="noopener noreferrer" className="glass rounded-lg px-5 py-3 flex items-center gap-2 hover:border-primary/50 transition-colors group">
+          <a href="https://wa.me/5541996374950" target="_blank" rel="noopener noreferrer" className="glass rounded-lg px-5 py-3 flex items-center gap-2 hover:border-primary/50 transition-colors group">
             <MessageCircle className="w-4 h-4 text-primary" />
             <span className="text-sm text-secondary-foreground group-hover:text-foreground transition-colors">{t.hero.whatsapp}</span>
           </a>
